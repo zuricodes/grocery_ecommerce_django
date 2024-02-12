@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     #Local
     'core.apps.CoreConfig',
     'users.apps.UsersConfig',
+    'pages.apps.PagesConfig',
 
 ]
 AUTH_USER_MODEL = 'users.CustomUser'
@@ -62,7 +63,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
